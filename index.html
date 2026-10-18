@@ -89,6 +89,12 @@ footer{padding:28px 20px 20px}.cols>div:last-child{grid-column:1/-1}.copy{margin
 .pdp.o .main{aspect-ratio:1/1.12}
 .nt{margin:0 0 26px;padding-left:18px}.nt li{margin:0 0 8px}
 @media(max-width:860px){.pdp.o{display:flex;flex-direction:column}.pdp.o .main{order:1;aspect-ratio:3/4;padding:6%}.pdp.o .th{order:2;display:flex;gap:8px;padding:12px 20px 0}.pdp.o .th div{margin:0;width:64px}.pdp.o .info{order:3}}
+html,body{max-width:100%;overflow-x:hidden}.pdp>*{min-width:0}
+.main{position:relative;display:block;width:100%;overflow:hidden;padding:0!important}
+.main img{position:absolute;top:6%;left:6%;width:88%;height:88%;max-width:none;max-height:none;object-fit:contain}
+.ph{position:relative;display:block;padding:0;overflow:hidden}
+.ph img{position:absolute;top:8%;left:8%;width:84%;height:84%;max-width:none;max-height:none;object-fit:contain}
+.th div{position:relative}.th img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
 </style></head><body>
 <header id="hd"><button class="mb" id="mb" aria-label="Menu" aria-expanded="false" onclick="menu()"><i></i><i></i></button><img class="lg" id="logo" alt="For-rest by Erdem" onclick="location.hash=''">
 <nav><a href="#" onclick="menu(false)">New Arrivals</a><a href="#" onclick="menu(false)">Ready to Wear</a><a href="#" onclick="menu(false)">Bags</a><a href="#" onclick="menu(false)">Accessories</a><a href="#collection" onclick="menu(false)">Collections</a></nav>
@@ -143,7 +149,7 @@ const card=i=>{const p=P[i-1];return `<a class="card" href="#p${i}"><div class="
 const rail=(a,b,f)=>{let h='<div class="rail"><button class="arr l" aria-label="Previous" onclick="sc(this,-1)">←</button><div class="scroll">';for(let i=a;i<=b;i++)h+=(f||card)(i);return h+'</div><button class="arr r" aria-label="Next" onclick="sc(this,1)">→</button><div class="bar"><b></b></div></div>'};
 function sc(b,d){const s=b.parentNode.querySelector('.scroll');s.scrollBy({left:d*s.clientWidth*.8,behavior:'smooth'})}
 function wall(){document.title="For-rest by Erdem";$('app').innerHTML=`<div class="hero"><img src="${IMG.glyph}" alt=""></div>
-<div class="sec rv"><h2>New Arrivals</h2><p>Tailoring is reimagined for the Autumn Winter 2026 collection.</p><a class="ul" href="#">Discover New Arrivals</a></div><div class="rv">${rail(1,8)}</div>
+<div class="sec rv"><h2>New Arrivals</h2><p>Tailoring is reimagined for the Spring Summer 2028 collection.</p><a class="ul" href="#">Discover New Arrivals</a></div><div class="rv">${rail(1,8)}</div>
 <div class="band rv"><h2>The Forest Edit</h2><p>Sculpted layers and organic form in moss and bark.</p><a class="ul" href="#">Discover Ready to Wear</a></div><div class="rv">${rail(9,15)}</div>
 <div class="sec rv" id="collection"><h2>The Collection</h2><p>Six outfits, from layered tailoring to sculptural gowns.</p></div><div class="rv">${rail(1,6,ocard)}</div>
 <div class="season rv"><h2 style="font-size:24px;margin-bottom:2px">Seasonal Dressing</h2><a class="ul" href="#">Explore</a></div>`}
@@ -154,7 +160,7 @@ $('app').innerHTML=`<a class="bk" href="#">← All pieces</a><div class="pdp"><d
 <div class="row" id="row"><select id="sz" aria-label="Size"><option value="">Select size</option>${sizes}</select><button>Size guide</button></div><span class="find">Find my size</span>
 <button class="add" id="ad" onclick="add()">Add to cart</button>
 <p class="desc">${p[2]}</p><a class="ul" href="#o${O.findIndex(o=>o.p.includes(i))+1}" style="margin-bottom:18px">Seen in Outfit 0${O.findIndex(o=>o.p.includes(i))+1}</a>
-<ul><li>Dry clean only</li><li>Product code: AW26_FR_${String(i).padStart(2,'0')}311000</li></ul>
+<ul><li>Dry clean only</li><li>Product code: SS28_FR_${String(i).padStart(2,'0')}311000</li></ul>
 <details open><summary>Size &amp; Fit</summary><p>Fits true to size.</p></details>
 <details><summary>Material &amp; Care</summary><p>56% Viscose, 37% Cotton, 7% Metal. Lining: 73% Acetate, 27% Silk. Dry clean.</p></details>
 <details><summary>Contact Customer Services</summary><p>Our client advisors are available Monday to Saturday.</p></details>
